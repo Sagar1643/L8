@@ -3,6 +3,7 @@
 int main() {
     float number;
 
+// added comment
  
     printf("Enter an integer: ");
     scanf("%f", &number);
