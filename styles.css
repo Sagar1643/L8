@@ -1,0 +1,220 @@
+:root {
+  --amity-navy: #081f5c;
+  --amity-blue: #0d47a1;
+  --amity-gold: #f4b400;
+  --soft-bg: #f4f7fb;
+  --text: #1f2937;
+  --muted: #5f6b7a;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--white);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white);
+  box-shadow: 0 2px 18px rgba(8, 31, 92, 0.08);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+.brand {
+  color: var(--amity-navy);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--amity-blue);
+}
+
+.hero-section {
+  display: grid;
+  min-height: 74vh;
+  place-items: center;
+  padding: 5rem 1.25rem;
+  color: var(--white);
+  background:
+    linear-gradient(110deg, rgba(8, 31, 92, 0.94), rgba(13, 71, 161, 0.76)),
+    radial-gradient(circle at top right, rgba(244, 180, 0, 0.5), transparent 34%);
+}
+
+.hero-content {
+  width: min(1120px, 100%);
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  color: var(--amity-gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+}
+
+.hero-copy {
+  max-width: 620px;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button.primary {
+  color: var(--amity-navy);
+  background: var(--amity-gold);
+}
+
+.button.secondary {
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.info-card {
+  min-height: 220px;
+  padding: 1.5rem;
+  border: 1px solid #e5eaf2;
+  border-radius: 1.25rem;
+  background: var(--white);
+  box-shadow: 0 18px 35px rgba(8, 31, 92, 0.08);
+}
+
+.info-card p,
+.highlight-section p,
+.admissions-section p {
+  color: var(--muted);
+}
+
+.highlight-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: none;
+  padding-right: max(1.25rem, calc((100vw - 1120px) / 2));
+  padding-left: max(1.25rem, calc((100vw - 1120px) / 2));
+  background: var(--soft-bg);
+}
+
+.admissions-section {
+  text-align: center;
+}
+
+.admissions-section .section-heading {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.admissions-section .button.secondary,
+.admissions-section .button.primary {
+  color: var(--amity-navy);
+}
+
+.site-footer {
+  padding: 2rem 1.25rem;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  background: var(--amity-navy);
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 760px) {
+  .navbar,
+  .nav-links,
+  .highlight-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 0.55rem;
+  }
+
+  .card-grid,
+  .highlight-section {
+    grid-template-columns: 1fr;
+  }
+}
