@@ -4,8 +4,8 @@ This repository will grow into an unofficial Amity University Bengaluru-style we
 
 ## Daily roadmap
 
-1. Create the static landing page scaffold.
-2. Add a responsive mobile navigation menu.
+1. **Done:** Create the static landing page scaffold.
+2. **Done:** Add a responsive mobile navigation menu.
 3. Add an admissions inquiry form layout.
 4. Add form validation with JavaScript.
 5. Create a dedicated programs page.
